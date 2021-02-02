@@ -2,6 +2,7 @@
 
 from appium import webdriver
 import time
+import os
 
 server = 'http://127.0.0.1:4723/wd/hub'
 desired_capabilities = {
