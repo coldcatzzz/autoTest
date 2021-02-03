@@ -9,15 +9,37 @@
 
 # test()
 
-ss = 123
-for i in str(ss):
-    print(i)
-    
+# ss = 123
+# for i in str(ss):
+#     print(i)
+
+# import unittest
+# import parameterized
+
+# class Test(unittest.TestCase):
+#     @parameterized.parameterized.expand([(1,2,3),(3,4,7),(2,3,5)])
+#     def testNumber(self,a,b,c):
+#         self.assertEqual(a+b,c)
+
+# if __name__ == '__main__':
+#     unittest.main(verbosity=2)
+
+import unittest
+from parameterized import parameterized   # 引入parameterized模块
+# a = [(1,2,3), (4,5,7)]
+
+class ceshi(unittest.TestCase):
+
+    # def test01(self):
+    #     self.assertEqual(2,2)
+
+    @parameterized.expand([(1,2,3),(4,6,10)])
+    def test02(self,a,b,c):
+        self.assertEqual(a+b,c)
 
 
-
-
-
+if __name__=='__main__':
+    unittest.main(verbosity=2)
 
 
 
