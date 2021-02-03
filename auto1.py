@@ -10,8 +10,6 @@ desired_capabilities = {
 	# 'deviceName':'88Y0219926011315',
 	'deviceName':'192.168.75.101:5555',
 	'platformVersion':'9',
-	# 'appPackage':'com.puzzle.designisland',
-	# 'appActivity': 'com.puzzle.sdk.unity.PZUnityPlayerActivity' 
 	'appPackage':'com.android.calculator2',
 	'appActivity': 'com.android.calculator2.Calculator',
 	'noReset':True,
