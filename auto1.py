@@ -2,7 +2,7 @@
 
 from appium import webdriver
 import time
-import os
+import pandas
 
 server = 'http://127.0.0.1:4723/wd/hub'
 desired_capabilities = {
@@ -22,11 +22,20 @@ desired_capabilities = {
 driver = webdriver.Remote(server,desired_capabilities)
 print('程序开始运行。。。')
 
-data = [
-	['123','+','45','158'],
-	['23','-','6','17'],
-	['6','*','8','48']
-]
+# data = [
+# 	['123','+','45','158'],
+# 	['23','-','6','17'],
+# 	['6','*','8','48']
+# ]
+
+# data = []
+# file = open('calc.txt','r')
+# for x in file:
+# 	data.append(x.split())
+# file.close()
+
+data = pandas.read_excel('calc.xlsx',sheet_name=0,names=['s1','op','s2','yq'],dtype={'s1':str,'op':str,'yq':str},header=None)
+data = data.values.tolist()
 
 for i in range(len(data)):
 	if data[i][1] == '+':
@@ -40,7 +49,7 @@ for i in data:
 	for j in range(len(i)-1):
 		x = i[j]
 		if j != 1:
-			for a in x:
+			for a in str(x):
 				driver.find_element_by_id('com.android.calculator2:id/digit_'+a).click()
 		else:
 			driver.find_element_by_id('com.android.calculator2:id/op_'+i[1]).click()
@@ -71,26 +80,4 @@ time.sleep(5)
 driver.quit()
 
 print('work well.................')
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
