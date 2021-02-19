@@ -4,7 +4,7 @@ from time import sleep
 server = 'http://127.0.0.1:4723/wd/hub'
 desired_capabilities = {
 	'platformName':'Android',
-	# 'deviceName':'88Y0219926011315',n
+	# 'deviceName':'88Y0219926011315',
 	'deviceName':'192.168.75.101:5555',
 	'platformVersion':'9',
 	# 'appPackage':'com.android.calculator2',
