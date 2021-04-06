@@ -1,2 +1,8 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(numbers[-3:])
+# #取列表最大值
+# numbers = [1, 2, 3, 4, 5, 99, 7, 8, 9, 10]
+# max = 0
+# for ss in numbers:
+#     if ss > max:
+#         max = ss
+# print(max)
+
