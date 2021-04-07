@@ -133,7 +133,7 @@
 # print(aa,',','len = ',len(aa))
 
 #多个{}{}的时候，需要指定位置,0,1,2
-from math import pi
+# from math import pi
 # ss = 'PI is {:.2f}'.format(pi)
 # print(ss)
 
@@ -149,23 +149,36 @@ from math import pi
 # aa = '{0:10.2f}\n{1:=10.2f}'.format(pi,-pi)
 # print(aa)
 
-aa = '{0:-.2}\n{1:-.2}'.format(pi,-pi)
+# aa = '{0:-.2}\n{1:-.2}'.format(pi,-pi)
 
-bb = '{0:+.2}\n{1:+.2}'.format(pi,-pi)
+# bb = '{0:+.2}\n{1:+.2}'.format(pi,-pi)
 
-cc = '{0: .2}\n{1: .2}'.format(pi,-pi)
+# cc = '{0: .2}\n{1: .2}'.format(pi,-pi)
 
-print(aa)
-print(bb)
-print(cc)
+# print(aa)
+# print(bb)
+# print(cc)
 
 # ss = '{0:+10}\n{1:+}'.format(66,33)
 # print(ss)
 
+#按照设定格式显示商品价格
+# width = int(input('Please enter width: '))
+# price_width = 10
+# item_width = width - price_width
+# header_fmt = '{{:{}}}{{:>{}}}'.format(item_width, price_width) # 40 10
+# fmt = '{{:{}}}{{:>{}.2f}}'.format(item_width, price_width)
+# print('=' * width)
+# print(header_fmt.format('Item','Price'))
+# print('-' * width)
+# print(fmt.format('Apples', 0.4))
+# print(fmt.format('Pears', 0.5))
+# print(fmt.format('Cantaloupes', 1.92))
+# print(fmt.format('Dried Apricots (16 oz.)', 8))
+# print(fmt.format('Prunes (4 lbs.)', 12))
+# print('=' * width)
 
-
-
-
+# print(header_fmt)  #{:40}{:>10}
 
 
 
