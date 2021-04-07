@@ -118,37 +118,49 @@
 # b = sorted(a)
 # print(b)
 
+# ss = 'helly'
+# print(ss[0:3])
 
+# fullname = ['Mike','Scofield']
 
+# print('Mr {name[1]}'.format(name = fullname))
 
+# print('the number {num} is {num:b}'.format(num = 99))
 
+# ss = '{num:10}'.format(num = 3)
+# aa = '{name:10}'.format(name = 'cat')   
+# print(ss)
+# print(aa,',','len = ',len(aa))
 
+#多个{}{}的时候，需要指定位置,0,1,2
+from math import pi
+# ss = 'PI is {:.2f}'.format(pi)
+# print(ss)
 
+# ss = '{0:010.2f}\n{0:010.3f}'.format(pi)
+# print(ss)
 
+# ss = '{0:<10.2f}\n{0:^10.2f}\n{0:>10.2f}'.format(pi)
+# print(ss)
 
+# aa = '{:*^50}'.format(' big win ')
+# print(aa)
 
+# aa = '{0:10.2f}\n{1:=10.2f}'.format(pi,-pi)
+# print(aa)
 
+aa = '{0:-.2}\n{1:-.2}'.format(pi,-pi)
 
+bb = '{0:+.2}\n{1:+.2}'.format(pi,-pi)
 
+cc = '{0: .2}\n{1: .2}'.format(pi,-pi)
 
+print(aa)
+print(bb)
+print(cc)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ss = '{0:+10}\n{1:+}'.format(66,33)
+# print(ss)
 
 
 
