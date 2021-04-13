@@ -180,24 +180,37 @@
 
 # print(header_fmt)  #{:40}{:>10}
 
+#字符串居中
+# print('pzx'.center(20,'*'))
 
+#查找子串
+# title = 'I like python'
+# ss = title.find('like')
+# print(ss)  # 2
+# ss2 = title.find('zzz')
+# print(ss2)  # -1
 
+#合并字符串
+# s1 = ['1','2','3','4','5']
+# s2 = '+'
+# print(s2.join(s1))
 
+# dirs = '','usr','bin','env'
+# print('/'.join(dirs))
+# print('C:' + '\\'.join(dirs))
 
+# ss = ['Aa','bb','cc']
+# aa = 'aa'
+# for i in ss:
+#     if aa == i.lower():
+#         print('okk')
+#         break
+#     else:
+#         print('no')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#字符串替换
+# ss = 'this is a test'.replace('a','MY')
+# print(ss)
 
 
 
