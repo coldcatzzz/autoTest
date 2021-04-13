@@ -212,54 +212,92 @@
 # ss = 'this is a test'.replace('a','MY')
 # print(ss)
 
+#字符串分割
+# ss = '1+2+3+4+5'.split('+')
+# print(ss)  # ['1', '2', '3', '4', '5']
 
+# ss2 = '/usr/bin/env'.split('/')
+# print(ss2)  # ['', 'usr', 'bin', 'env']
 
+# ss3 = 'i like python'.split()
+# print(ss3)  # ['i', 'like', 'python']
 
+# 去除字符串首尾空白
+# names = ['abc','def','ghj']
+# name = ' abc ' # 多空格
+# if name.strip() in names:
+#     print('ok')
 
+# ss = '***I *** like **** python'.strip('*')
+# print(ss)  # I *** like **** python
 
+#单字符转换 translate
+#使用translate前要先创建一个转换表
+# table = str.maketrans('cs','kz') #对应位置转换
+# st = 'this is an incredible test'.translate(table)
+# print(st)  # thiz iz an inkredible tezt
+# table2 = str.maketrans('cs','kz',' ')
+# st = 'this is an incredible test'.translate(table2)
+# print(st)  # thizizaninkredibletezt
 
+# ss = '6'
+# print(ss.isdigit())  # True
 
+#创建字典
+# items = [('name','Tom'),('age',20)]
+# d = dict(items)
+# print(d)
 
+# dd = dict(name = 'Tom',age = 20)
+# print(dd)
 
+# ss = {'name':'Tom','sex':'man'}
+# print(ss)
 
+# s = []
+# s[1] = 'tomy'
+# print(s) #  list assignment index out of range
 
+# s = {}
+# s[22] = 'tmo'
+# print(s)
 
+# people = {
+#     'Alice': {
+#         'phone': '2341',
+#         'addr': 'Foo drive 23'
+#     },
+#     'Beth': {
+#         'phone': '9102',
+#         'addr': 'Bar street 42'
+#     },
+#     'Cecil': {
+#         'phone': '3158',
+#         'addr': 'Baz avenue 90'
+#     }
+# }
 
+# labels = {
+#     'phone': 'phone number',
+#     'addr': 'address'
+# }
+# name = input('Name: ')
+# request = input('Phone number (p) or address (a)? ')
+# if request == 'p': key = 'phone'
+# if request == 'a': key = 'addr'
+# if name in people: print("{}'s {} is {}.".format(name, labels[key], people[name][key]))
 
+# template = '''<html>
+#                 <head><title>{title}</title></head>
+#                 <body>
+#                 <h1>{title}</h1>
+#                 <p>{text}</p>
+#                 </body>
+#                 </html>
+#             '''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# data = {'title': 'My Home Page', 'text': 'Welcome to my home page!'}
+# print(template.format_map(data))
 
 
 
