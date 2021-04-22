@@ -377,625 +377,113 @@
 # for x in result:
 #     print(dict_test[x],' ',end='')  
 
-def hi(msg):
-    print('Test' , msg)
+# def greet_user(first_name,last_name):
+#     print(f'Hi, {first_name} {last_name}')
 
-hi('haha')
+# greet_user('Ma',last_name= 'Jack')
 
+# def square(num):
+#     return num * num
 
+# print(square(10))
 
+# def get_emoji(face):
+#     words = face.split(' ') # good morning :)
+#     emojis = {
+#         ':)' : '"smile"',
+#         ':(' : '"cry"'
+#     }
 
+#     output = ''
+#     for word in words:
+#         output += emojis.get(word,word) + ' '
+#     return output
 
+# msg = input('> ')
+# print(get_emoji(msg))
 
+# try:
+#     age = int(input('age:'))
+#     income = 20000
+#     risk = income/age
+#     print(age)
+#     print(risk)
+# except ZeroDivisionError:
+#     print('age cannot be zero')
+# except ValueError:
+#     print('Invalid value')
 
+# class Point():
 
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
 
+#     def move(self):
+#         print('move')
 
+#     def draw(self):
+#         print('draw')
 
+# try:
+#     point = Point(10,20)
+#     print(point.x)
+#     print(point.y)
+#     print(point.z)
+# except AttributeError:
+#     print('wrong value')
 
+# class Person:
+#     def __init__(self,name):
+#         self.name = name
 
+#     def talk(self):
+#         print(f'Hi,I am {self.name}')
 
+# tom = Person('tom')
+# tom.talk()
+# print(tom.name)
+# bob = Person('bob')
+# bob.talk()
 
+# class Mammal():
+#     def walk(self):
+#         print('walk...')
 
 
+# class Dog(Mammal):
+#     ...
 
 
+# class Cat(Mammal):
+#     ...
 
 
+# d1 = Dog()
+# d1.walk()
 
+# c1 = Cat()
+# c1.walk()
 
+# from utils import find_max
 
+# result = find_max([1,2,5,7,34,7,3,6,6,445])
+# print(result)
 
+# import random
+# list_random = []
+# for i in range(5):
+#     # print('{:.3f}'.format(random.random()))
+#     result = random.randint(1,6)
+#     list_random.append(result)
+#     print(result)
+# list_random.sort()
+# print(list_random)
 
+# members = ['tom','jack','black','mike']
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# leader = random.choice(members)
+# print(leader.title())
 
 
 
