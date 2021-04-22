@@ -299,32 +299,88 @@
 # data = {'title': 'My Home Page', 'text': 'Welcome to my home page!'}
 # print(template.format_map(data))
 
+#停车游戏
+# commend = ''
+# started = False
+# while True:
+#     commend = input('> ')
+#     if commend == 'start':
+#         if started:
+#             print('car is already started!')
+#         else:
+#             started = True
+#             print('car start...')
+#     elif commend == 'stop':
+#         if not started:
+#             print('car is already stopped')
+#         else:
+#             started = False
+#             print('car stop')
+#     elif commend =='help':
+#         print('''
+#             start - to start the car
+#             stop - to stop the car
+#             quit - to exit
+#         ''')
+#     elif commend == 'quit':
+#         break
+#     else:
+#         print("I dont't understand")
 
+# price = [10,20,30]
+# sum = 0
+# for i in price:
+#     sum += i
+# print(f'sum is {sum} dollers')
 
+# for x in range(4):
+#     for y in range(3):
+#         print(f'({x},{y})')
 
+# numbers = [5,2,5,2,2]
+# for count in numbers:
+#     outLook = ''
+#     for xx in range(count):
+#         outLook += 'x'
+#     print(outLook)
 
+# numbers = [2,3,56,7,3,2,2,5,2,1]
+# max = 0
+# for each in numbers:
+#     if each >= max:
+#         max = each
+# print(max)
 
+# num1 = [1,2,3,2,6]
+# num2 = num1.copy()
+# num2.remove(3)
+# print(num1)
+# print(num2)
 
+# numbers = [2,2,3,3,6,6,4,1,8,7,7,6,4]
+# other = []
+# for number in numbers:
+#     if number not in other:
+#         other.append(number)
+# print(other)
 
+# nums = (1,2,3)
+# x,y,z = nums
+# print(x,y)
 
+# dict_test = {
+#     '1':'one',
+#     '2':'two',
+#     '3':'three'
+# }
+# result = input('your phone:') 
+# for x in result:
+#     print(dict_test[x],' ',end='')  
 
+def hi(msg):
+    print('Test' , msg)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+hi('haha')
 
 
 
