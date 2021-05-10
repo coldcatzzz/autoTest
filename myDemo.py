@@ -485,6 +485,281 @@
 # leader = random.choice(members)
 # print(leader.title())
 
+# import random
+
+# class Dice():
+    
+#     def roll(self):
+#         first = random.randint(1,6)
+#         second = random.randint(1,6)
+#         return first , second 
+
+# dice = Dice()
+# print(dice.roll())
+
+#添加文件夹，删除文件夹
+# from pathlib import Path
+
+# path = Path()
+# # if path.exists() == False:
+# #     path.mkdir()
+# for file_list in path.glob('*'):
+#     print(file_list)
+
+#execl
+# import openpyxl as xl
+# from openpyxl.chart import BarChart , Reference
+
+# def process_workbook(filaname):
+#     wb = xl.load_workbook(filaname)
+#     sheet = wb['Sheet1']
+#     sheet['d1'] = 'correct_price'
+
+#     for row in range(2,sheet.max_row +1):  # 2,5
+#         cell = sheet.cell(row , 3)
+#         correct_price = cell.value * 0.9
+#         correct_price_cell = sheet.cell(row,4)
+#         correct_price_cell.value = correct_price
+
+#     values = Reference(sheet,
+#                         min_row=2,
+#                         max_row=sheet.max_row,
+#                         min_col=4,
+#                         max_col=4
+#     )
+
+#     chart = BarChart()
+#     chart.add_data(values)
+#     sheet.add_chart(chart,'b6')
+
+#     wb.save(filaname)
+
+# process_workbook('transactions.xlsx')
+
+# def febs(num): #形参
+#     result = [0 , 1]
+#     for i in range(num-2):
+#         result.append(result[-2] + result[-1])
+#     return result
+
+# print(febs(10)) #实参
+
+
+# num = 1
+# def fun1():
+#     global num
+#     print(num)
+#     num = 123
+#     print(num)
+# fun1()
+# print(num)
+
+# ss = {'name':'zzz'}
+# print(ss['name'])
+
+# def pa(**params):
+#     print(params)
+
+# pa(x=1,y=2,z=3)
+
+# def add(x,y):
+#     return x + y
+
+# params = (1,2)
+# print(add(*params))
+
+# def hello_3(greeting='Hello', name='world'):
+#     print('{}, {}!'.format(greeting, name))
+
+# params = {'name':'ppp','greeting':'sz'}
+# hello_3(**params)
+
+# def power(x, y, *others):
+#     if others:
+#         print('Received redundant parameters:', others)
+#     return pow(x, y)
+
+# # print(power(y=5,x=2))
+# params = (5,) * 2
+# print(params)   #(5,5)
+# print(power(*params))   #?        3125
+# print(5**5)
+
+# x = 1
+# scope = vars()
+# print(scope['x'])
+# scope['x'] += 1
+# print(x)
+
+# def foo():
+#     x = 22
+#     x = 33
+#     x = 55
+
+# x = 1
+# foo()
+# print(x)
+
+# def output(x):
+#     print('x =',x)
+
+# x = 1
+# y = 2
+# output(y)
+
+# external = 'berry'
+# parameter = 'jack'
+
+# def combine(parameter):
+#     global external
+#     print(parameter , globals()['parameter'])
+
+# combine('shrub')
+
+# y = 1
+# def sum(x):
+#     global y
+#     y = 2
+#     return x + y
+
+# print(sum(2))
+
+# x = 1
+# def change():
+#     global x
+#     x += 1
+
+# change()
+# print(x)
+
+# def multiplier(factory):
+#     def multiplyByFactory(number):
+#         return number * factory
+#     return multiplyByFactory
+
+# double = multiplier(2)  
+# print(double(5))
+
+# print(multiplier(5)(4))
+
+# def x():
+#     return x()
+
+# print(x())
+
+# x = 1
+# while True:
+#     x+=1
+#     print(x)
+
+
+# while True:
+#     x = 1
+#     x+=1
+#     print(x)
+
+# def factorial(n):
+#     result = n
+#     for i in range(1,n):
+#         result *= i
+#     return result
+
+# print(factorial(5))
+
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+
+# print(factorial(3))
+
+# def power(x,n): # 2**3
+#     result = 1
+#     for i in range(n):
+#         result *= x
+#     return result
+
+# def power2(x,n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return x * power2(x, n-1)
+
+# print(power2(2, 3))
+
+# seq = [1,2,3,4]
+# seq.sort()
+
+# def search(sequence,number,lower = 0,upper = None):
+#     if upper == None:
+#         upper = len(sequence) - 1
+#     if lower == upper:
+#         assert number == sequence[upper]
+#         return upper
+#     else:
+#         middle = (lower + upper ) //2
+#         if number > sequence[middle]:
+#             return search(sequence, number,middle+1,upper)
+#         else:
+#             return search(sequence, number,lower,middle)
+
+# print(search(seq , 2))
+
+# print(seq.index(3))
+
+# arr = [1,2,3,4,5,6,7,8]
+
+# num = 4
+# count = 0
+# for i in arr:
+#     if i != num:
+#         count += 1
+#     else:
+#         print('num的下标是:',count)
+
+# seq = ["foo", "x41", "?!", "***"]
+
+# re = filter(lambda x : x.isalnum(), seq)
+# ss = filter(lambda x : x.isalnum(), seq)
+# print(ss)
+
+# ss = [x for x in seq if x.isalnum()]
+# print(ss)
+
+# ss = [str(i) for i in range(10)]
+# print(ss)
+
+# s1 = list(map(str,range(10)))
+# print(s1)
+
+# from functools import reduce
+# numbers = []
+# for i in range(101):
+#     if i != 0:
+#         numbers.append(i)
+        
+# print(numbers)
+# print(sum(numbers))
+# print(reduce(lambda x , y : x + y, numbers))
+
+# from random import choice
+
+# s1 = choice([1,2,3,4,5,6])
+# s2 = choice([1,2,3,4,5,6])
+# s3 = choice([1,2,3,4,5,6])
+# s4 = choice([1,2,3,4,5,6])
+# s5 = choice([1,2,3,4,5,6])
+# s6 = choice([1,2,3,4,5,6])
+# print(s1,s2,s3,s4,s5,s6)
+
+def lenth_msg(x):
+    print('the length of' , repr(x) , 'is' ,len(x))
+
+lenth_msg([1,2,3])
+
+
+
 
 
 
