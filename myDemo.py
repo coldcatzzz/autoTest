@@ -753,10 +753,365 @@
 # s6 = choice([1,2,3,4,5,6])
 # print(s1,s2,s3,s4,s5,s6)
 
-def lenth_msg(x):
-    print('the length of' , repr(x) , 'is' ,len(x))
+# def lenth_msg(x):
+#     print('the length of' , repr(x) , 'is' ,len(x))
 
-lenth_msg([1,2,3])
+# lenth_msg([1,2,3])
+
+# class Person:
+    
+#     def set_name(self,name):
+#         self.name = name
+
+#     def get_name(self):
+#         return self.name
+
+#     def greet(self):
+#         print("hello,world! I'm {}.".format(self.name))
+
+# p = Person()
+# p.set_name('Jack')
+# print(p.get_name())
+# p.greet()
+# print(p.name)
+
+# p2 = Person()
+# p2.name = 'Tom'
+# p2.greet()
+
+# class Class():
+
+#     method = ''
+
+#     def method(self):
+#         print('i have self')
+
+# def function():
+#     print('i dont')
+
+# ins = Class()
+# ins.method()
+
+# ins.method = function
+# ins.method()
+
+# class Bird:
+#     song = 'squaawk'
+    
+#     def sing(self):
+#         print(self.song) 
+
+# bird = Bird()
+# bird.sing()
+# birdsong = bird.sing
+# birdsong()
+
+# class Secretive:
+
+#     name = 'test1'
+#     __age = 25
+
+#     def __inaccessible(self):
+#         print('you cant see me')
+
+#     def sccessible(self):
+#         print('the secret message is :')
+#         self.__inaccessible()
+
+# s = Secretive()
+# # s.__inaccessible()
+# s.sccessible()
+# s._Secretive__inaccessible()
+
+# print(s.name)
+# s.name = 'test2'
+# print(s.name)
+# print(s._Secretive__age)
+# s._Secretive__age = 30
+# print(s._Secretive__age)
+
+# class MemberCounter:
+#     count = 0
+#     def init(self):
+#         MemberCounter.count += 1
+
+# m1 = MemberCounter()
+# m1.init()
+# print(m1.count)
+
+# m2 = MemberCounter()
+# m2.init()
+# print(m2.count)
+
+
+# m1.count = 100
+# print(m1.count)
+
+# print(m2.count)
+
+# class Filter:
+#     def init(self):
+#         self.blocked = []
+#     def filter(self , sequence):
+#         return [x for x in sequence if str(x).lower() not in self.blocked]
+
+# class SPAMFilter(Filter):
+#     def init(self):
+#         self.blocked = ['spam']
+
+# f = Filter()
+# f.init()
+# re = f.filter([1,2,3])
+# print(re)
+
+# s = SPAMFilter()
+# s.init()
+# re = s.filter(['spam', 'SpAM', 'SPAM', 'SPAM', 'eggs', 'bacon', 'SPAM']) # ['eggs', 'bacon']
+# print(re)
+
+# class ABCFilter(Filter):
+#     def init(self):
+#         self.blocked = ['abc']
+
+# abc = ABCFilter()
+# abc.init()
+# re = abc.filter(['ab','bc','ac','abc','ABC','abcd','eee'])
+# print(re)
+
+# class Animal:
+#     pass
+
+# class Bird(Animal):
+#     pass
+
+# print(issubclass(Bird, Animal))
+# print(issubclass(Animal, Bird))
+
+# print(Bird.__bases__)
+# print(Animal.__bases__)
+# print(object.__bases__) # None
+
+# b1 = Bird()
+# print(isinstance(b1, Bird))
+# print(isinstance(b1, Animal))
+
+# print(b1.__class__())
+
+# a1 = Animal()
+# print(a1.__class__())
+
+# print(type(b1))
+# print(type(a1))
+
+# 计算器
+# class Calculator:
+#     def calculate(self,expression):
+#         self.value = eval(expression)
+
+#     def talk(self):
+#         print('cal value is :',self.value)
+
+# class Talker:
+#     def talk(self):
+#         print('value:',self.value)
+
+# class TalkingCalculator(Talker,Calculator):
+#     ...
+
+# tc = TalkingCalculator()
+# tc.calculate('1+2+3')
+# print(tc.value)
+# print(type(tc.value)) # int
+# tc.talk()
+
+# #检查属性是否存在
+# print(hasattr(tc, 'talk'))
+# print(hasattr(tc, 'aaa'))
+
+# #检查属性是否可以调用
+# print(callable(getattr(tc,'talk',None)))
+# print(callable(getattr(tc,'aaa',None)))
+
+#抽象类
+# from abc import ABC , abstractmethod
+
+# class Talker(ABC):
+#     @abstractmethod #子类必须实现所有的基类抽象方法
+#     def talk(self):
+#         pass
+
+#     @abstractmethod    
+#     def run(self):
+#         pass
+
+# # t = Talker() # 报错，抽象类不能实例化
+
+# class Knigget(Talker):
+#     def talk(self):
+#         print('Hi')
+
+#     def run(self):
+#         print('running')
+
+# class Runner(Talker):
+#     def run(self):
+#         print('running')
+
+#     def talk(self):
+#         print('talking...')
+
+# k = Knigget() #报错，还没有实现基类的方法，无法实例化
+
+# k = Knigget()
+# print(isinstance(k, Knigget)) #True
+# print(isinstance(k, Talker))
+# k.talk()
+# k.run()
+
+# r = Runner()
+# print(isinstance(r, Runner))
+# r.run()
+# r.talk()
+
+# # 鸭子类型
+# class Herring:
+#     def talk(self):
+#         print('Bulb.')
+
+# h = Herring()
+# print(isinstance(h, Talker))
+# print(type(h))
+
+# Talker.register(Herring)
+# print(isinstance(h, Talker))
+# h.talk()
+
+# class Clam:
+#     pass
+
+# Talker.register(Clam)
+# print(issubclass(Clam, Talker))
+
+# c = Clam()
+# print(isinstance(c, Talker))
+# # c.talk() # x 
+
+#异常
+# try:
+#     x = int(input('first:'))
+#     y = int(input('second:'))
+#     print(x/y)
+# except ZeroDivisionError:
+#     print("The second number can't be zero!")
+# except ValueError: # not TypeError
+#     print("That wasn't a number, was it?")
+
+# 捕获多个异常
+# try:
+#     x = int(input('first:'))
+#     y = int(input('second:'))
+#     print(x/y)
+# except (ValueError , TypeError , ValueError , NameError , ZeroDivisionError):
+#     print('please enter right number')
+
+# try:
+#     x = int(input('first:'))
+#     y = int(input('second:'))
+#     print(x/y)
+# except (ZeroDivisionError , ValueError) as e:
+#     print(e)
+
+# try:
+#     x = int(input('first:'))
+#     y = int(input('second:'))
+#     print(x/y)
+# except:
+#     print('womething wrong happened')
+
+# class MuffledCalculator:
+#     muffled = False
+#     def calc(self,expr):
+#         try:
+#             return eval(expr)
+#         except ZeroDivisionError:
+#             if self.muffled:
+#                 print('Division by zero is illegal')
+#             else:
+#                 raise
+
+# calculator = MuffledCalculator()
+# # print(calculator.calc('10/2'))
+# print(calculator.calc('10/0'))
+
+# try:
+#     1/0
+# except ZeroDivisionError:
+#     raise ValueError from None
+
+# try:
+#     print('a task')
+# except:
+#     print('some wrong')
+# else:
+#     print('ok')
+
+# while True:
+#     try:
+#         x = int(input('first:'))
+#         y = int(input('second:'))
+#         print(x/y)
+#     except:
+#         print('womething wrong happened')
+#     else:
+#         break
+
+# while True:
+#     try:
+#         x = int(input('first:'))
+#         y = int(input('second:'))
+#         print(x/y)
+#     except Exception as e:
+#         print('Invalid input:',e)
+#         print('try again')
+#     else:
+#         break
+
+# x = None
+# try:
+#     1/0
+# finally:
+#     print('clean...')
+#     del x
+
+try:
+    1/1
+except ZeroDivisionError:
+    print('Unknow variable')
+else:
+    print('That went well')
+finally:
+    print('Clean...')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
