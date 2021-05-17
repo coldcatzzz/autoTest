@@ -1083,33 +1083,281 @@
 #     print('clean...')
 #     del x
 
-try:
-    1/1
-except ZeroDivisionError:
-    print('Unknow variable')
-else:
-    print('That went well')
-finally:
-    print('Clean...')
+# try:
+#     1/1
+# except ZeroDivisionError:
+#     print('Unknow variable')
+# else:
+#     print('That went well')
+# finally:
+#     print('Clean...')
+
+# def faulty():
+#     raise Exception('Something is wrong')
+
+# def ignore_exception():
+#     faulty()
+
+# def handle_exception():
+#     try:
+#         faulty()
+#     except:
+#         print('Exception handled')
+
+# # ignore_exception()
+# handle_exception()
+
+# person = {
+#     'name':'Jack',
+#     'age':22,
+#     'occupation':'programer'
+# }
+
+# person = {
+#     'name':'Jack',
+#     'age':22
+# }
 
 
+# def describe_person(person):
+#     print('Description of', person['name'])
+#     print('Age:',person['age'])
+#     if 'occupation' in person:
+#         print('Occupation:', person['occupation'])
 
+# def describe_person(person):
+#     print('Description of', person['name'])
+#     print('Age:',person['age'])
+#     try:
+#         print('Occupation:', person['occupation'])
+#     except KeyError:
+#         pass
+        
 
+# describe_person(person)
 
+# class Obj:
+#     write = ''
 
+# try:
+#     Obj.write
+# except AttributeError:
+#     print('The object is not writeable')
+# else:
+#     print('yes')
 
+# class Foobar:
+#     def __init__(self):
+#         self.somevar = 33
 
+# f = Foobar()
+# print(f.somevar)
 
+# class Foobar:
+#     def __init__(self,value = 22):
+#         self.somevar = value
 
+# f = Foobar()
+# print(f.somevar)
 
+# class A:
+#     def hello(self):
+#         print('hello,i am A')
 
+# class B(A):
+#     def hello(self):
+#         print('i am B')
 
+# a = A()
+# b = B()
 
+# a.hello()
+# b.hello()
 
+# class Bird:
+#     def __init__(self):
+#         self.hungry = True
+    
+#     def eat(self):
+#         if self.hungry:
+#             print('i want to eat more')
+#             self.hungry = False
+#         else:
+#             print('No,thanks')
 
+# b = Bird()
+# b.eat()
+# b.eat()
 
+# class SongBird(Bird):
+#     def __init__(self):
+#         super().__init__()
+#         self.sound = 'Squawk'
 
+#     def sing(self):
+#         print(self.sound)
 
+# sb = SongBird()
+# sb.sing()
+# sb.eat()
+
+# class Rectangle:
+#     def __init__(self):
+#         self.width = 0
+#         self.height = 0
+    
+#     def set_size(self,size):
+#         self.width , self.height = size
+
+#     def get_size(self):
+#         return self.width , self.height
+
+# r = Rectangle()
+# r.width = 10
+# r.height = 5
+
+# print(r.get_size())
+
+# r.set_size((100,200))
+# print(r.width)
+
+#特性 property
+# class Rectangle:
+#     def __init__(self):
+#         self.width = 0
+#         self.height = 0
+    
+#     def set_size(self,size):
+#         self.width , self.height = size
+
+#     def get_size(self):
+#         return self.width , self.height
+
+#     size = property(get_size , set_size)
+
+# r = Rectangle()
+# r.width = 10
+# r.height = 5
+
+# print(r.size)
+# r.size = 100 , 200
+# print(r.width)
+# print(r.height)
+
+# class MyClass:
+#     def smeth():
+#         print('This is a static method')
+
+#     smeth = staticmethod(smeth)
+
+# def cmeth(cls):
+#     print('This is a class method of',cls)
+
+#     cmeth = classmethod(cmeth)
+
+# MyClass.smeth()
+
+# class MyClass:
+
+#     @staticmethod
+#     def smeth():
+#         print('This is a static method')
+
+#     @classmethod
+#     def cmeth(cls):
+#         print('This is a class method of',cls)
+
+# MyClass.smeth()
+# MyClass.cmeth()
+
+# class Fibs:
+#     def __init__(self):
+#         self.a = 0
+#         self.b = 1
+    
+#     def __next__(self):
+#         self.a , self.b = self.b , self.a + self.b
+#         return self.a
+
+#     def __iter__(self):
+#         return self
+
+# fibs = Fibs()
+# for f in fibs:
+#     if f > 10000:
+#         print(f)
+#         break
+
+# class TestIterator:
+
+#     value = 0
+
+#     def __next__(self):
+#         self.value += 1
+#         if self.value > 10:
+#             raise StopIteration
+#         return self.value
+
+#     def __iter__(self):
+#         return self
+
+# ti = TestIterator()
+# print(list(ti))
+
+# arr = [[1,2],[3,4],[5,6]]  # 1,2,3,4,5,6
+# newArr = []
+# for i in arr:
+#     for j in i:
+#         # print(j,end=' ')
+#         newArr.append(j)
+# print(newArr)
+
+# nested = [[1, 2], [3, 4], [5]]
+
+# def flatten(nested):
+#     for sublist in nested:
+#         for element in sublist:
+#             yield element
+
+# # 迭代生成器
+# # for num in flatten(nested):
+# #     print(num)
+
+# print(list(flatten(nested)))
+
+# ss = sum(i ** 2 for i in range(10))
+# print(ss)
+
+# ss = [i ** 2 for i in range(10)]
+# print(ss)
+
+# def flatten(nested):
+#     try:
+#         try:
+#             nested + ''
+#         except TypeError:
+#             pass
+#         else:
+#             raise TypeError
+
+#         for submit in nested:
+#             for element in flatten(submit):
+#                 yield element
+#     except TypeError:
+#         yield nested
+
+# ss = list(flatten([[[1] , 2] , 3 , 4 , [5 , [6 , 7]] , 8]))
+# print(ss)
+
+# tt = list(flatten(['foo', ['bar', ['baz']]]))
+# print(tt)
+
+import sys
+sys.path.append('C:/Users/Administrator/Desktop/auto/autoTest')
+import hello
+
+hello.hello()
+hello.test()
 
 
 
