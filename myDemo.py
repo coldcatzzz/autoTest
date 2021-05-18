@@ -1352,18 +1352,166 @@
 # tt = list(flatten(['foo', ['bar', ['baz']]]))
 # print(tt)
 
-import sys
-sys.path.append('C:/Users/Administrator/Desktop/auto/autoTest')
-import hello
+# import sys
+# sys.path.append('C:/Users/Administrator/Desktop/auto/autoTest')
+# import hello
 
-hello.hello()
-hello.test()
+# hello.hello()
+# hello.test()
+
+# import sys , pprint
+
+# pprint.pprint(sys.path)
+
+# import python_test
+
+# python_test.hello()
+
+# python_test.test()
+
+# import hello
+
+# hello.hello()
+# hello.test()
+
+# from drawing import colors , shapes
+
+# colors.test()
+# shapes.test()
+
+# 'r' 读取模式（默认值）
+# 'w' 写入模式
+# 'x' 独占写入模式
+# 'a' 附加模式
+# 'b' 二进制模式（与其他模式结合使用）
+# 't' 文本模式（默认值，与其他模式结合使用）
+# '+' 读写模式（与其他模式结合使用）
+
+# f = open('doc.txt','w')
+# f.write('hello')
+# f.close()
+
+# f = open('doc.txt','r')
+# print(f.read())
+
+# f = open('doc.txt','w')
+# f.write('01234567890123456789')
+# f.seek(5)
+# f.write('add')
+# f.close()
+# f = open('doc.txt')
+# print(f.read())
+
+# f = open('doc.txt')
+# print(f.readline())
+# print(f.readline())
+# print(f.readline())
+
+# print(f.readlines())
+
+# try:
+#     f = open('doc.txt','w')
+#     f.write('hi,Jack')
+# finally:
+#     f = open('doc.txt')
+#     print(f.readline())
+#     f.close()
+
+# with open('doc.txt','w') as f:
+#     f.write('Hi,Tom')
+    
+# with open('doc.txt') as f:
+#     print(f.readline())
+
+# f = open(r'doc.txt')
+# print(f.read(7))
+# print(f.read(4))
+# f.close()
+
+# f = open(r'doc.txt')
+# print(f.read())
+# f.close()
+
+# f = open(r'doc.txt')
+# for i in range(3):
+#     print(str(i) + ':' + f.readline(), end='')
+# f.close()
+
+# import pprint
+
+# pprint.pprint(open(r'doc.txt').readlines())
+
+# print(open(r'doc.txt').readlines())
+
+# f = open(r'doc.txt','w')
+# f.write('this\nis no\nhaiku')
+# f.close()
+
+# f = open(r'doc.txt')
+# lines = f.readlines()
+# print(lines)
+# f.close()
+
+# lines[1] = "isn't a\n"
+# f = open(r'doc.txt','w')
+# f.writelines(lines)
+# f.close()
+
+# f = open(r'doc.txt')
+# lines = f.readlines()
+# print(lines)
+# f.close()
+
+# def process(string):
+#     print('process:', string)
+
+# with open(r'doc.txt') as f:
+#     while True:
+#         char = f.read(1)
+#         if not char:
+#             break
+#         process(char)
+
+# with open(r'doc.txt') as f:
+#     for char in f.read():
+#         print(char,end='')
 
 
+# with open(r'doc.txt') as f:
+#     for lines in f.readlines():
+#         print(lines)
 
+# with open(r'doc.txt') as f:
+#     print(f.readlines())
 
+# import fileinput
 
+# def process(string):
+#     print('process:', string)
 
+# # for line in fileinput.input(r'doc.txt'):
+# #     process(line)
+
+# with open(r'doc.txt') as f:
+#     for line in f:
+#         process(line)
+
+# f = open('doc.txt', 'w')
+# print('First', 'line', file = f)
+# print('Second', 'line', file = f)
+# print('Thrid','and final' ,'line', file = f)
+# f.close()
+
+# # f = open('doc.txt')
+# # print(f.read())
+
+# lines = list(open('doc.txt'))
+# print(lines)
+
+# first , second , thrid = open('doc.txt')
+# print(first)
+# print(second)
+# print(thrid)
 
 
 
